@@ -8,7 +8,7 @@ def get_ts(m3u8_url,headers):
         all_ts = re.findall('TxRcCpeN-[0-9]*.ts',res.text)#定义自己的用来匹配ts的正则表达式
         return all_ts
     else:
-        return ('m3u8页面是访问失败！')
+        return ('m3u8页面访问失败！')
 def get_mp4(root_url,ts_list,headers,path,file_name):
     for num in range(len(ts_list)):
         ts_url = root_url + ts_list[num] 
